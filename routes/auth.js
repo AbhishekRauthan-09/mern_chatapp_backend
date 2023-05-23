@@ -8,6 +8,9 @@ const {
 
 const router = require("express").Router();
 
+router.get('/',(req,res)=>{
+  res.send("This is from the server")
+})
 router.post("/login", login);
 router.post("/register", register);
 router.get("/allusers/:id", getAllUsers);
