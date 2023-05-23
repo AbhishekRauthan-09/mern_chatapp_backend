@@ -29,9 +29,10 @@ app.use("/api/messages", messageRoutes);
 const server = app.listen(PORT, () =>
   console.log(`Server started on ${PORT}`)
 );
+
 const io = socket(server, {
   cors: {
-    origin: "https://mern-chatapp-front-end.vercel.app",
+    origin: "https://mern-chatapp-front-end.vercel.app/",
     credentials: true,
   },
 });
