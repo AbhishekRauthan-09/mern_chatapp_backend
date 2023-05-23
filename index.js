@@ -32,7 +32,7 @@ const server = app.listen(PORT, () =>
 
 const io = socket(server, {
   cors: {
-    origin: "https://mern-chatapp-front-end.vercel.app/",
+    origin: process.env.BASE_URL,
     credentials: true,
   },
 });
